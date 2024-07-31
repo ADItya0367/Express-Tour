@@ -1,4 +1,4 @@
-// email validation in express js using express-validator library
+// email validation in express js using express-validator
 
 const express = require('express');
 const app = express();
