@@ -24,8 +24,6 @@ mongoconnect().then(
                 res.send('Data saved');
             }).catch(err=>console.log(err));
         })
-       
-
     }
 
 ).catch(err=>console.log(err));
