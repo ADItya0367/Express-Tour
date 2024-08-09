@@ -15,4 +15,6 @@ let datab= mongoose.connect('mongodb+srv://admin:admin@konnect.lcafeyj.mongodb.n
     console.log("Database connection failed");
 })
 
+
+
 module.exports = datab;

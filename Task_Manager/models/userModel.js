@@ -18,7 +18,7 @@ const Schemaa = mongoose.Schema({
         type: String,
         required: true
     },
-    username: {
+    email: {
         type: String,
         required: true
     },
@@ -29,6 +29,22 @@ const Schemaa = mongoose.Schema({
  },{
         timestamps: true
  })
+
+
+// // code to convert password into hash using bcrypt
+// Schemaa.pre( 'save', async function(next){
+//     const userss = this;
+//       if(!userss.isModified('password'))  return next();
+//           let salt = await bcrypt.genSalt(10);
+//           let hash = await bcrypt.hash(userss.password, salt);
+//           userss.password = hash;
+//           next();
+//  })
+// // now we will be comparing the password here 
+
+//       Schemaa.methods.comparePassword = async function(password){
+//           return bcrypt.compare(password, this.password);
+//       }
 
 
 const Peoples = mongoose.model('Peoples', Schemaa);
