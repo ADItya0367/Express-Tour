@@ -74,11 +74,20 @@ app.post('/api/delete', (req, res) => {
     })
 })
 
+//--------------------------------------------------------------
 
+app.post('/api/update', (req, res) => {
 
+    Animals.findByIdAndUpdate(req.body.name, {
+        email: req.body.email,
+    }).then((result)=>{
+        console.log('Data updated successfully')
+    })
 
-
-
+    res.status(200).json({
+        message: 'Updated Successfully'
+    })
+})
 
 
 
