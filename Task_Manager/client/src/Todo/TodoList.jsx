@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 function TodoList() {
   return (
     <div>
-        <h1>To do list here</h1>
+       <Navbar/>
     </div>
   )
 }
