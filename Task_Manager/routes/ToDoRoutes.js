@@ -1,9 +1,10 @@
 const express = require('express');
 const authJWT = require('../middlewares/authJWT');
 const todoController = require('../controllers/todoController');
-const createtodoRoute = express.Router();
+const router = express.Router();
 
 
-createtodoRoute.post('/createtask',authJWT,todoController)
+router.post('/createtask',authJWT,todoController)
+router.post('/gettask/:userId',authJWT,todoControllerss.gettodoController)
 
-module.exports = createtodoRoute;
+module.exports = router;

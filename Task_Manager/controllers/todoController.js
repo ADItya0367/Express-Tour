@@ -1,4 +1,4 @@
-const {Todo} = require("../models/todoList");
+const {Todo, create} = require("../models/todoList");
 
 
 
@@ -17,4 +17,24 @@ const {Todo} = require("../models/todoList");
    }
 }
 
-module.exports = todoController ;
+
+ let gettodoController = async(req,res)=>{
+    let {userId} = req.params;
+    try {
+       const result = await Todo.find({createdBy:userId});
+        res.status(200).send(result); 
+    } catch (error) {
+      console.log(error)
+      res.send('something went wrong')  
+      
+    }
+}
+
+
+ let todoControllerss ={
+    todoController,
+    gettodoController
+ }
+
+
+module.exports = todoControllerss ;
